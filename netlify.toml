@@ -5,15 +5,7 @@
   package = "@helloample/netlify-plugin-replace"
 
   [plugins.inputs]
-    files = ["config.js"]
-
-    [plugins.inputs.replacements]
-      "NETLIFY_VAR_FIREBASE_API_KEY"      = "$FIREBASE_API_KEY"
-      "NETLIFY_VAR_FIREBASE_AUTH_DOMAIN"  = "$FIREBASE_AUTH_DOMAIN"
-      "NETLIFY_VAR_FIREBASE_DB_URL"       = "$FIREBASE_DB_URL"
-      "NETLIFY_VAR_FIREBASE_PROJECT_ID"   = "$FIREBASE_PROJECT_ID"
-      "NETLIFY_VAR_APP_USERNAME"          = "$APP_USERNAME"
-      "NETLIFY_VAR_APP_PASSWORD"          = "$APP_PASSWORD"
+    fileTypes = ["js"]
 
 [build.environment]
   SECRETS_SCAN_OMIT_PATHS = "config.js"
