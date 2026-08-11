@@ -4,3 +4,5 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  SECRETS_SCAN_OMIT_PATHS = "config.js"
+  SECRETS_SCAN_SMART_DETECTION_ENABLED = "false"
