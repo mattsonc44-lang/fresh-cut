@@ -1,16 +1,6 @@
-# Netlify build configuration
-# Replaces placeholder tokens in config.js with real environment variables at deploy time
-
-[[plugins]]
-  package = "@netlify/plugin-replace"
-
-  [plugins.inputs.replacements]
-    "NETLIFY_VAR_FIREBASE_API_KEY"      = "$FIREBASE_API_KEY"
-    "NETLIFY_VAR_FIREBASE_AUTH_DOMAIN"  = "$FIREBASE_AUTH_DOMAIN"
-    "NETLIFY_VAR_FIREBASE_DB_URL"       = "$FIREBASE_DB_URL"
-    "NETLIFY_VAR_FIREBASE_PROJECT_ID"   = "$FIREBASE_PROJECT_ID"
-    "NETLIFY_VAR_APP_USERNAME"          = "$APP_USERNAME"
-    "NETLIFY_VAR_APP_PASSWORD"          = "$APP_PASSWORD"
-
 [build]
+  command = "node build.js"
   publish = "/"
+
+[build.environment]
+  NODE_VERSION = "18"
